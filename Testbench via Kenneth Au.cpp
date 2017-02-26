@@ -10,11 +10,11 @@ int main(int argc, char* argv[])
 	cout << "Testbench via Kenneth Au\n\n";
 
 	cout << "\tOutput for 1 CPU FCFS\n";
-	MyScheduler ms = MyScheduler(Policy::FCFS, 1);
-	ms.CreateThread(1, 24, 0, 9000);
-	ms.CreateThread(2, 3, 0, 9001);
-	ms.CreateThread(3, 4, 0, 9002);
-	ms.Go();
+	MyScheduler ms1 = MyScheduler(Policy::FCFS, 1);
+	ms1.CreateThread(1, 24, 0, 9000);
+	ms1.CreateThread(2, 3, 0, 9001);
+	ms1.CreateThread(3, 4, 0, 9002);
+	ms1.Go();
 	/* Results should be:
 
 	Thread ID : 9000 Finishing Time : 25 CPU No. : 0
@@ -23,11 +23,11 @@ int main(int argc, char* argv[])
 
 
 	cout << "\tOutput for 2 CPU FCFS\n";
-	ms = MyScheduler(Policy::FCFS, 2);
-	ms.CreateThread(1, 24, 0, 9000);
-	ms.CreateThread(2, 3, 0, 9001);
-	ms.CreateThread(3, 4, 0, 9002);
-	ms.Go();
+	MyScheduler ms2 = MyScheduler(Policy::FCFS, 2);
+	ms2.CreateThread(1, 24, 0, 9000);
+	ms2.CreateThread(2, 3, 0, 9001);
+	ms2.CreateThread(3, 4, 0, 9002);
+	ms2.Go();
 	/* Results should be:
 
 	Thread ID : 9001 Finishing Time :  5 CPU No. : 1
@@ -36,11 +36,11 @@ int main(int argc, char* argv[])
 
 
 	cout << "\tOutput for 3 CPU FCFS\n";
-	ms = MyScheduler(Policy::FCFS, 3);
-	ms.CreateThread(1, 24, 0, 9000);
-	ms.CreateThread(2, 3, 0, 9001);
-	ms.CreateThread(3, 4, 0, 9002);
-	ms.Go();
+	MyScheduler ms3 = MyScheduler(Policy::FCFS, 3);
+	ms3.CreateThread(1, 24, 0, 9000);
+	ms3.CreateThread(2, 3, 0, 9001);
+	ms3.CreateThread(3, 4, 0, 9002);
+	ms3.Go();
 	/* Results should be:
 
 	Thread ID : 9001 Finishing Time :  5 CPU No. : 1
