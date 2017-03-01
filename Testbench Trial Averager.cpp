@@ -1,7 +1,7 @@
 // via Adam Geiger
 
 // This testbench runs your code for [60] threads for each policy. It does this for [20] trials.
-//  Then Averages the total time for each trail for each policy and prints it out.
+//  Then Averages the total time for each trial for each policy and prints it out.
 
 #include "myscheduler.h"
 #include <time.h>
@@ -38,17 +38,17 @@ int main(int argc, char* argv[])
   
   cout << "Testbench via Adam Geiger\n\n";
   
-  // Change for different amount of trails.
-  int trails = 20;
+  // Change for different amount of trials.
+  int trials = 20;
   
-  for (int trail_i = 0; trail_i < trails; trail_i++)
+  for (int trial_i = 0; trial_i < trials; trial_i++)
   {
     CreateListOfThreads(all_threads, totalThreads);
     for (int policy_i = 0; policy_i < 4; policy_i++)
     {
       policy = (Policy)policy_i;
       cout << "-----------" << endl;
-      cout << "policy: " << policy_i << " trail: " << trail_i << endl;
+      cout << "policy: " << policy_i << " trial: " << trial_i << endl;
       cout << "-----------" << endl;
       
       MyScheduler ms = MyScheduler(policy, numberOfCPUs);
